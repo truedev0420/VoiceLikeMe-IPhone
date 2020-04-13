@@ -1,0 +1,5 @@
+language: objective-c
+
+script:
+- chmod a+x ./travis_build
+- ./travis_build
