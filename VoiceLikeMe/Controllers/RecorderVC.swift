@@ -14,13 +14,16 @@ enum RecordingStatus : String {
 }
 
 class RecorderVC: UIViewController {
+    
     var audioRecorder: AVAudioRecorder!
     
-    var waveFilePath    : String!
-    var waveFileName    : String!
-    var rawFileName     : String!
-    var audioEngine     : AVAudioEngine!
-    var sampleRate      : Int32!
+    let rawFileName         = "recorded.raw"
+    let convertedFileName   = "recorded.cvr"
+    
+    
+    var waveFilePath        : String!
+    var audioEngine         : AVAudioEngine!
+    var sampleRate          : Int32!
     
     var currentRecordingStatus : RecordingStatus!
         
@@ -62,14 +65,14 @@ class RecorderVC: UIViewController {
     }
     
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "stopRecordingSG"{
-            let playSoundsVC = segue.destination as! PlaySoundsVC
-            let recordedAudioURL = sender as! URL
-            
-            playSoundsVC.recordedAudioURL = recordedAudioURL
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "stopRecordingSG"{
+////            let playSoundsVC = segue.destination as! PlaySoundsVC
+////            let recordedAudioURL = sender as! URL
+////
+////            playSoundsVC.recordedAudioURL = recordedAudioURL
+//        }
+//    }
     
     func customAlert(title: String, message: String){
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -162,10 +165,8 @@ extension RecorderVC: AVAudioRecorderDelegate{
 
         try! session.setActive(true)
 
-        
         waveFilePath = dirPath
-        waveFileName = "recorded.wav"
-        rawFileName = "recorded.raw"
+        
         
         let rawFilePath = waveFilePath + "/" + rawFileName
         print("Raw file path : " + rawFilePath)
@@ -174,6 +175,7 @@ extension RecorderVC: AVAudioRecorderDelegate{
         startRecording()
     }
     
+        
     
     func convertRawData()
     {
@@ -181,7 +183,7 @@ extension RecorderVC: AVAudioRecorderDelegate{
         let rawFilePath = waveFilePath + "/" + rawFileName
                 
         do{
-            let destFilePath = waveFilePath + "/" + waveFileName
+            let destFilePath = waveFilePath + "/" + convertedFileName
             let fileManager = FileManager.default
 
                       
@@ -285,7 +287,7 @@ extension RecorderVC: AVAudioRecorderDelegate{
         }
         
         
-        let sourceFilePath = waveFilePath + "/" + waveFileName
+        let sourceFilePath = waveFilePath + "/" + convertedFileName
         if(fileManager.fileExists(atPath:sourceFilePath)){
             
             try! fileManager.removeItem(atPath: sourceFilePath)
@@ -302,8 +304,8 @@ extension RecorderVC: AVAudioRecorderDelegate{
         convertRawData()
         createWavFile();
         
-        let destFilePath = waveFilePath + "/" + waveFileName
-        performSegue(withIdentifier: "stopRecordingSG", sender : URL(string : destFilePath))
+//        let destFilePath = waveFilePath + "/" + convertedFileName
+//        performSegue(withIdentifier: "stopRecordingSG", sender : URL(string : destFilePath))
     }
     
     @IBAction func pauseRecording(_ sender: Any) {
@@ -325,9 +327,6 @@ extension RecorderVC: AVAudioRecorderDelegate{
         }
     }
     
-    @IBAction func showPlayList(_ sender: Any) {
-        
-    }
     
     @IBAction func showHelp(_ sender: Any) {
         let url = URL(string:helpUrl)!
@@ -339,7 +338,7 @@ extension RecorderVC: AVAudioRecorderDelegate{
         
         if flag {
             
-            let destFilePath = waveFilePath + "/" + waveFileName
+            let destFilePath = waveFilePath + "/" + convertedFileName
                         
 //            performSegue(withIdentifier: "stopRecordingSG", sender: audioRecorder.url)
 //            performSegue(withIdentifier: "stopRecordingSG", sender : URL(string : destFilePath))
@@ -406,7 +405,7 @@ extension RecorderVC: AVAudioRecorderDelegate{
     
     func createWavFile(){
         
-        let sourceFilePath = waveFilePath + "/" + waveFileName
+        let sourceFilePath = waveFilePath + "/" + convertedFileName
         
         print("sourceFilePath : " + sourceFilePath)
         
@@ -426,7 +425,12 @@ extension RecorderVC: AVAudioRecorderDelegate{
         let rawData = fileSource?.readDataToEndOfFile()
         
         let arFileManager = ARFileManager()
-        try! arFileManager.createWavFile(rawData : rawData!, filename : "converted.wav", sampleRate : sampleRate)
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyyMMdd_HHmmss"
+        let wavFileName = formatter.string(from: Date()) + ".wav"
+
+        try! arFileManager.createWavFile(rawData : rawData!, filename : wavFileName, sampleRate : sampleRate)
                     
         fileSource?.closeFile()
     }

@@ -28,7 +28,7 @@ class ARFileManager {
           return fileManager.urls(for: .documentDirectory, in: .userDomainMask).first
       }
 
-    func createWavFile(rawData: Data, filename : String, sampleRate : Int32) throws -> URL {
+      func createWavFile(rawData: Data, filename : String, sampleRate : Int32) throws -> URL {
            //Prepare Wav file header
            let waveHeaderFormate = createWaveHeader(data: rawData) as Data
 
@@ -41,8 +41,10 @@ class ARFileManager {
            //Store Wav file in document directory.
            return try storeMusicFile(data: waveFileData)
        }
+    
+    
 
-       private func createWaveHeader(data: Data) -> NSData {
+       public func createWaveHeader(data: Data) -> NSData {
 
             let sampleRate:Int32 = self.sampleRate
             let chunkSize:Int32 = 36 + Int32(data.count)
