@@ -107,7 +107,8 @@ class PlayerVC: UIViewController {
                         print("Ooops! Something went wrong: \(error)")
                     }
                     
-                    self.collectionView.reloadData()
+                    self.loadData()
+                    
                 }))
 
                 self.present(alert, animated: true, completion: nil)
@@ -132,7 +133,7 @@ class PlayerVC: UIViewController {
                         try! fileManager.removeItem(atPath: destFilePath)
                     }
                     
-                    self.collectionView.reloadData()
+                    self.loadData()
                 }))
 
                 refreshAlert.addAction(UIAlertAction(title: "NO", style: .cancel, handler: { (action: UIAlertAction!) in
@@ -174,6 +175,8 @@ class PlayerVC: UIViewController {
         
         let fileManager = FileManager.default
         let documentsURL = fileManager.urls(for: .documentDirectory, in: .userDomainMask)[0]
+        
+        playList.removeAll()
         
         do {
             let fileURLs = try fileManager.contentsOfDirectory(at: documentsURL, includingPropertiesForKeys: nil)
