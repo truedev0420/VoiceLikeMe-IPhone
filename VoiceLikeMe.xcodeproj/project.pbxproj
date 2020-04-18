@@ -12,15 +12,19 @@
 		5476A4201FD98E7200F20B64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5476A41E1FD98E7200F20B64 /* Main.storyboard */; };
 		5476A4221FD98E7200F20B64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5476A4211FD98E7200F20B64 /* Assets.xcassets */; };
 		5476A4251FD98E7200F20B64 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5476A4231FD98E7200F20B64 /* LaunchScreen.storyboard */; };
-		5476A4341FDAE6A600F20B64 /* BebasNeue.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5476A4331FDAE6A500F20B64 /* BebasNeue.otf */; };
 		A305140624440092008131EC /* recording.gif in Resources */ = {isa = PBXBuildFile; fileRef = A305140524440092008131EC /* recording.gif */; };
+		A31B3D6E244A2EE40001DD16 /* PlayListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31B3D6D244A2EE40001DD16 /* PlayListCell.swift */; };
+		A31B3D70244A2F2A0001DD16 /* PlayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31B3D6F244A2F2A0001DD16 /* PlayItem.swift */; };
 		A31CA5AB2387BEB200FDF890 /* ARFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31CA5AA2387BEB200FDF890 /* ARFileManager.swift */; };
 		A326E2A323853DC1005E5ED1 /* speex_process.c in Sources */ = {isa = PBXBuildFile; fileRef = A326E2A223853DC1005E5ED1 /* speex_process.c */; };
 		A327D0222440CAFA007CDBD9 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A327D0212440CAFA007CDBD9 /* RoundButton.swift */; };
+		A33C350A2449F3620049537A /* SelectionDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33C35092449F3620049537A /* SelectionDialog.swift */; };
+		A33C350C2449F3910049537A /* SelectionDialogItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33C350B2449F3910049537A /* SelectionDialogItem.swift */; };
+		A33C350E2449F3C90049537A /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33C350D2449F3C90049537A /* UIImageExtension.swift */; };
 		A341B8172443EF0400E7013E /* iOSDevCenters+GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = A341B8162443EF0400E7013E /* iOSDevCenters+GIF.swift */; };
 		A35438202444B0690041E80F /* Speex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A354381F2444B0680041E80F /* Speex.framework */; };
 		A370A973244893B90093229C /* PlayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A370A972244893B90093229C /* PlayerVC.swift */; };
-		A3A802B4244938CD007230C7 /* MediaUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A802B3244938CD007230C7 /* MediaUtil.swift */; };
+		A39C2A112449E48500DF0662 /* coolvetica crammed rg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A39C2A102449E48500DF0662 /* coolvetica crammed rg.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,17 +35,21 @@
 		5476A4211FD98E7200F20B64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5476A4241FD98E7200F20B64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5476A4261FD98E7200F20B64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5476A4331FDAE6A500F20B64 /* BebasNeue.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BebasNeue.otf; sourceTree = "<group>"; };
 		A305140524440092008131EC /* recording.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = recording.gif; sourceTree = "<group>"; };
+		A31B3D6D244A2EE40001DD16 /* PlayListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayListCell.swift; sourceTree = "<group>"; };
+		A31B3D6F244A2F2A0001DD16 /* PlayItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayItem.swift; sourceTree = "<group>"; };
 		A31CA5AA2387BEB200FDF890 /* ARFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARFileManager.swift; sourceTree = "<group>"; };
 		A326E29D23853B5C005E5ED1 /* VoiceLikeMe-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VoiceLikeMe-Bridging-Header.h"; sourceTree = "<group>"; };
 		A326E2A123853DC1005E5ED1 /* speex_process.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = speex_process.h; sourceTree = "<group>"; };
 		A326E2A223853DC1005E5ED1 /* speex_process.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = speex_process.c; sourceTree = "<group>"; };
 		A327D0212440CAFA007CDBD9 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		A33C35092449F3620049537A /* SelectionDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionDialog.swift; sourceTree = "<group>"; };
+		A33C350B2449F3910049537A /* SelectionDialogItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionDialogItem.swift; sourceTree = "<group>"; };
+		A33C350D2449F3C90049537A /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		A341B8162443EF0400E7013E /* iOSDevCenters+GIF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "iOSDevCenters+GIF.swift"; sourceTree = "<group>"; };
 		A354381F2444B0680041E80F /* Speex.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Speex.framework; path = "VoiceLikeMe/IDZPrecompiledSpeex-master/Speex.framework"; sourceTree = "<group>"; };
 		A370A972244893B90093229C /* PlayerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerVC.swift; sourceTree = "<group>"; };
-		A3A802B3244938CD007230C7 /* MediaUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaUtil.swift; sourceTree = "<group>"; };
+		A39C2A102449E48500DF0662 /* coolvetica crammed rg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "coolvetica crammed rg.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,9 +97,9 @@
 		5476A42C1FDA0E4300F20B64 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A39C2A102449E48500DF0662 /* coolvetica crammed rg.ttf */,
 				A305140524440092008131EC /* recording.gif */,
 				5476A4211FD98E7200F20B64 /* Assets.xcassets */,
-				5476A4331FDAE6A500F20B64 /* BebasNeue.otf */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -114,6 +122,8 @@
 		54F20E9C1FDC17EB00A2EC96 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				A31B3D6C244A2ED50001DD16 /* PlayList */,
+				A33C35082449F34B0049537A /* SelectionDialog */,
 				5476A41C1FD98E7200F20B64 /* RecorderVC.swift */,
 				A370A972244893B90093229C /* PlayerVC.swift */,
 				A326E29D23853B5C005E5ED1 /* VoiceLikeMe-Bridging-Header.h */,
@@ -122,7 +132,6 @@
 				A31CA5AA2387BEB200FDF890 /* ARFileManager.swift */,
 				A327D0212440CAFA007CDBD9 /* RoundButton.swift */,
 				A341B8162443EF0400E7013E /* iOSDevCenters+GIF.swift */,
-				A3A802B3244938CD007230C7 /* MediaUtil.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -136,12 +145,31 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
+		A31B3D6C244A2ED50001DD16 /* PlayList */ = {
+			isa = PBXGroup;
+			children = (
+				A31B3D6D244A2EE40001DD16 /* PlayListCell.swift */,
+				A31B3D6F244A2F2A0001DD16 /* PlayItem.swift */,
+			);
+			path = PlayList;
+			sourceTree = "<group>";
+		};
 		A326E29423852F1F005E5ED1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				A354381F2444B0680041E80F /* Speex.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A33C35082449F34B0049537A /* SelectionDialog */ = {
+			isa = PBXGroup;
+			children = (
+				A33C35092449F3620049537A /* SelectionDialog.swift */,
+				A33C350B2449F3910049537A /* SelectionDialogItem.swift */,
+				A33C350D2449F3C90049537A /* UIImageExtension.swift */,
+			);
+			path = SelectionDialog;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,7 +234,7 @@
 			files = (
 				5476A4251FD98E7200F20B64 /* LaunchScreen.storyboard in Resources */,
 				5476A4221FD98E7200F20B64 /* Assets.xcassets in Resources */,
-				5476A4341FDAE6A600F20B64 /* BebasNeue.otf in Resources */,
+				A39C2A112449E48500DF0662 /* coolvetica crammed rg.ttf in Resources */,
 				A305140624440092008131EC /* recording.gif in Resources */,
 				5476A4201FD98E7200F20B64 /* Main.storyboard in Resources */,
 			);
@@ -219,13 +247,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3A802B4244938CD007230C7 /* MediaUtil.swift in Sources */,
+				A31B3D6E244A2EE40001DD16 /* PlayListCell.swift in Sources */,
 				A31CA5AB2387BEB200FDF890 /* ARFileManager.swift in Sources */,
 				A341B8172443EF0400E7013E /* iOSDevCenters+GIF.swift in Sources */,
 				A326E2A323853DC1005E5ED1 /* speex_process.c in Sources */,
+				A33C350E2449F3C90049537A /* UIImageExtension.swift in Sources */,
 				A327D0222440CAFA007CDBD9 /* RoundButton.swift in Sources */,
+				A33C350C2449F3910049537A /* SelectionDialogItem.swift in Sources */,
 				5476A41D1FD98E7200F20B64 /* RecorderVC.swift in Sources */,
 				A370A973244893B90093229C /* PlayerVC.swift in Sources */,
+				A33C350A2449F3620049537A /* SelectionDialog.swift in Sources */,
+				A31B3D70244A2F2A0001DD16 /* PlayItem.swift in Sources */,
 				5476A41B1FD98E7200F20B64 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

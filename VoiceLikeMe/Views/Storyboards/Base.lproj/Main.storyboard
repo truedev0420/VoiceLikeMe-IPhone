@@ -216,7 +216,7 @@
             </objects>
             <point key="canvasLocation" x="1631" y="107"/>
         </scene>
-        <!--Voices LIke Me-->
+        <!--Voices Like Me-->
         <scene sceneID="btP-un-x4b">
             <objects>
                 <viewController id="kfW-xq-uEt" customClass="PlayerVC" customModule="VoiceLikeMe" customModuleProvider="target" sceneMemberID="viewController">
@@ -227,6 +227,9 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wT3-Pt-q1i">
                                 <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="365" id="Zwq-m2-iWB"/>
+                                </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="10" id="ih9-Y0-tqY">
                                     <size key="itemSize" width="375" height="86"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -243,7 +246,6 @@
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OFo-Ak-Z7a" userLabel="ProgressBar">
                                                     <rect key="frame" x="0.0" y="0.0" width="20" height="85"/>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XUT-Ai-iZn" userLabel="Border">
                                                     <rect key="frame" x="0.0" y="85" width="375" height="1"/>
@@ -253,87 +255,85 @@
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20200410_082012.wav" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="D5d-kQ-SKp">
-                                                    <rect key="frame" x="66" y="22" width="210" height="21"/>
+                                                    <rect key="frame" x="73" y="22" width="210" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="19"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="coolvetica crammed rg"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wLx-a7-zkj">
-                                                    <rect key="frame" x="339" y="30" width="26" height="26"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="26" id="eIY-xj-P97"/>
-                                                        <constraint firstAttribute="width" constant="26" id="mkb-JH-0xS"/>
-                                                    </constraints>
-                                                    <state key="normal" image="trash.fill" catalog="system">
-                                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
-                                                    </state>
-                                                </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="4/10/2020, 8:20 AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="scM-5k-laV">
-                                                    <rect key="frame" x="66" y="48" width="173" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d2d-dm-tor">
-                                                    <rect key="frame" x="278" y="22" width="53" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="00:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tIj-3X-bLh">
-                                                    <rect key="frame" x="278" y="48" width="53" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="46" id="Wlk-mv-MOn"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d2d-dm-tor">
+                                                    <rect key="frame" x="278" y="22" width="73" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="8UI-Jx-jXv">
-                                                    <rect key="frame" x="8" y="21" width="57" height="56"/>
+                                                    <rect key="frame" x="8" y="15" width="57" height="56"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="24" id="QCO-LJ-cKp"/>
                                                         <constraint firstAttribute="height" constant="24" id="X4u-xD-IGg"/>
                                                     </constraints>
-                                                    <state key="normal" image="ic_play_arrow_grey">
+                                                    <state key="normal" backgroundImage="ic_play_arrow_grey">
                                                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                                                     </state>
                                                     <connections>
                                                         <action selector="action_playToggle:" destination="20c-dP-6Sx" eventType="touchUpInside" id="Snt-EI-bcY"/>
                                                     </connections>
                                                 </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nij-EI-csA" userLabel="Lbl duration">
+                                                    <rect key="frame" x="278" y="48" width="73" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="4/10/2020, 8:20 AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="scM-5k-laV">
+                                                    <rect key="frame" x="73" y="48" width="173" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="OFo-Ak-Z7a" firstAttribute="top" secondItem="J8d-jW-05a" secondAttribute="top" id="0E0-8z-IlS"/>
                                                 <constraint firstItem="XUT-Ai-iZn" firstAttribute="leading" secondItem="J8d-jW-05a" secondAttribute="leading" id="21k-L2-zAh"/>
                                                 <constraint firstAttribute="leading" secondItem="OFo-Ak-Z7a" secondAttribute="trailing" constant="-20" id="89T-bD-ZoY"/>
                                                 <constraint firstAttribute="bottom" secondItem="XUT-Ai-iZn" secondAttribute="bottom" id="AIc-T1-gTr"/>
-                                                <constraint firstItem="tIj-3X-bLh" firstAttribute="centerY" secondItem="J8d-jW-05a" secondAttribute="centerY" id="CUe-MD-nIj"/>
                                                 <constraint firstItem="D5d-kQ-SKp" firstAttribute="leading" secondItem="8UI-Jx-jXv" secondAttribute="trailing" constant="10" id="DuS-Ec-Up8"/>
                                                 <constraint firstItem="D5d-kQ-SKp" firstAttribute="topMargin" secondItem="J8d-jW-05a" secondAttribute="topMargin" constant="13" id="Jdh-Yf-32T"/>
                                                 <constraint firstItem="OFo-Ak-Z7a" firstAttribute="leading" secondItem="J8d-jW-05a" secondAttribute="leading" id="Qh5-tt-5j1"/>
-                                                <constraint firstAttribute="trailing" secondItem="wLx-a7-zkj" secondAttribute="trailing" constant="10" id="QsT-vS-HOy"/>
-                                                <constraint firstItem="tIj-3X-bLh" firstAttribute="leading" secondItem="D5d-kQ-SKp" secondAttribute="trailing" constant="10" id="SSQ-WR-lSq"/>
-                                                <constraint firstItem="wLx-a7-zkj" firstAttribute="leading" secondItem="tIj-3X-bLh" secondAttribute="trailing" constant="10" id="WVy-Tw-cA2"/>
                                                 <constraint firstItem="8UI-Jx-jXv" firstAttribute="leading" secondItem="J8d-jW-05a" secondAttribute="leading" constant="10" id="aEL-vQ-V5W"/>
                                                 <constraint firstItem="8UI-Jx-jXv" firstAttribute="centerY" secondItem="J8d-jW-05a" secondAttribute="centerY" id="bzE-y1-2gg"/>
                                                 <constraint firstAttribute="trailing" secondItem="XUT-Ai-iZn" secondAttribute="trailing" id="gLa-AO-gZ3"/>
                                                 <constraint firstItem="XUT-Ai-iZn" firstAttribute="top" secondItem="OFo-Ak-Z7a" secondAttribute="bottom" id="h5w-vz-Kai"/>
-                                                <constraint firstItem="wLx-a7-zkj" firstAttribute="centerY" secondItem="J8d-jW-05a" secondAttribute="centerY" id="nlv-EK-MBr"/>
                                             </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number">
+                                                    <string key="keyPath">layer.cornerRadius
+</string>
+                                                    <integer key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                    <integer key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                    <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="375" height="86"/>
                                         <connections>
                                             <outlet property="btn_play" destination="8UI-Jx-jXv" id="Z1H-iL-sZw"/>
-                                            <outlet property="btn_setting" destination="wLx-a7-zkj" id="57h-FD-wus"/>
                                             <outlet property="constraint_right" destination="89T-bD-ZoY" id="fjT-9e-sPq"/>
                                             <outlet property="lbl_currentDuration" destination="d2d-dm-tor" id="W8C-xW-2M2"/>
                                             <outlet property="lbl_date" destination="scM-5k-laV" id="5FI-Gx-h30"/>
-                                            <outlet property="lbl_length" destination="tIj-3X-bLh" id="3Jt-rn-GEs"/>
+                                            <outlet property="lbl_length" destination="nij-EI-csA" id="jJZ-yV-G7d"/>
                                             <outlet property="lbl_name" destination="D5d-kQ-SKp" id="nhN-6z-mMp"/>
                                             <outlet property="progressBar" destination="OFo-Ak-Z7a" id="2Br-6N-qcH"/>
                                         </connections>
@@ -347,6 +347,8 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="wT3-Pt-q1i" firstAttribute="leading" secondItem="BiC-j4-c3f" secondAttribute="leading" constant="5" id="DXB-yg-zbb"/>
+                            <constraint firstItem="wT3-Pt-q1i" firstAttribute="trailing" secondItem="BiC-j4-c3f" secondAttribute="trailing" constant="5" id="Pxs-J0-3LT"/>
                             <constraint firstItem="wT3-Pt-q1i" firstAttribute="bottom" secondItem="BiC-j4-c3f" secondAttribute="bottom" id="Pyu-VN-xaT"/>
                             <constraint firstItem="wT3-Pt-q1i" firstAttribute="leading" secondItem="BiC-j4-c3f" secondAttribute="leading" id="Uwn-IO-DPz"/>
                             <constraint firstItem="wT3-Pt-q1i" firstAttribute="trailing" secondItem="BiC-j4-c3f" secondAttribute="trailing" id="jdv-s2-DzJ"/>
@@ -354,7 +356,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BiC-j4-c3f"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Voices LIke Me" id="MGw-Ce-Byu">
+                    <navigationItem key="navigationItem" title="Voices Like Me" id="MGw-Ce-Byu">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="mBm-rP-mdP">
                             <connections>
                                 <action selector="action_goto_recorderVC:" destination="kfW-xq-uEt" id="3Me-7E-Klk"/>
@@ -378,6 +380,5 @@
         <image name="ic_play_arrow_grey" width="36" height="36"/>
         <image name="ic_playlist_white" width="27" height="27"/>
         <image name="recording_paused" width="800" height="600"/>
-        <image name="trash.fill" catalog="system" width="60" height="64"/>
     </resources>
 </document>
