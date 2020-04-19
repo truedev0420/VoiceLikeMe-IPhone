@@ -227,32 +227,22 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wT3-Pt-q1i">
                                 <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="365" id="Zwq-m2-iWB"/>
-                                </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="10" id="ih9-Y0-tqY">
-                                    <size key="itemSize" width="375" height="86"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="12" id="ih9-Y0-tqY">
+                                    <size key="itemSize" width="364" height="86"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PlayListCell" id="20c-dP-6Sx" customClass="PlayListCell" customModule="VoiceLikeMe" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="86"/>
+                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PlayListCell" id="20c-dP-6Sx" customClass="PlayListCell" customModule="VoiceLikeMe" customModuleProvider="target">
+                                        <rect key="frame" x="5.5" y="10" width="364" height="86"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="J8d-jW-05a">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="86"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="J8d-jW-05a" customClass="MyUIView" customModule="VoiceLikeMe" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="364" height="86"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OFo-Ak-Z7a" userLabel="ProgressBar">
-                                                    <rect key="frame" x="0.0" y="0.0" width="20" height="85"/>
-                                                </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XUT-Ai-iZn" userLabel="Border">
-                                                    <rect key="frame" x="0.0" y="85" width="375" height="1"/>
-                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="1" id="YhC-ON-KNV"/>
-                                                    </constraints>
+                                                    <rect key="frame" x="0.0" y="0.0" width="20" height="86"/>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20200410_082012.wav" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="D5d-kQ-SKp">
                                                     <rect key="frame" x="73" y="22" width="210" height="21"/>
@@ -265,7 +255,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d2d-dm-tor">
-                                                    <rect key="frame" x="278" y="22" width="73" height="21"/>
+                                                    <rect key="frame" x="267" y="22" width="73" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -286,7 +276,7 @@
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nij-EI-csA" userLabel="Lbl duration">
-                                                    <rect key="frame" x="278" y="48" width="73" height="21"/>
+                                                    <rect key="frame" x="267" y="48" width="73" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -300,18 +290,16 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="OFo-Ak-Z7a" firstAttribute="top" secondItem="J8d-jW-05a" secondAttribute="top" id="0E0-8z-IlS"/>
-                                                <constraint firstItem="XUT-Ai-iZn" firstAttribute="leading" secondItem="J8d-jW-05a" secondAttribute="leading" id="21k-L2-zAh"/>
                                                 <constraint firstAttribute="leading" secondItem="OFo-Ak-Z7a" secondAttribute="trailing" constant="-20" id="89T-bD-ZoY"/>
-                                                <constraint firstAttribute="bottom" secondItem="XUT-Ai-iZn" secondAttribute="bottom" id="AIc-T1-gTr"/>
                                                 <constraint firstItem="D5d-kQ-SKp" firstAttribute="leading" secondItem="8UI-Jx-jXv" secondAttribute="trailing" constant="10" id="DuS-Ec-Up8"/>
                                                 <constraint firstItem="D5d-kQ-SKp" firstAttribute="topMargin" secondItem="J8d-jW-05a" secondAttribute="topMargin" constant="13" id="Jdh-Yf-32T"/>
                                                 <constraint firstItem="OFo-Ak-Z7a" firstAttribute="leading" secondItem="J8d-jW-05a" secondAttribute="leading" id="Qh5-tt-5j1"/>
                                                 <constraint firstItem="8UI-Jx-jXv" firstAttribute="leading" secondItem="J8d-jW-05a" secondAttribute="leading" constant="10" id="aEL-vQ-V5W"/>
                                                 <constraint firstItem="8UI-Jx-jXv" firstAttribute="centerY" secondItem="J8d-jW-05a" secondAttribute="centerY" id="bzE-y1-2gg"/>
-                                                <constraint firstAttribute="trailing" secondItem="XUT-Ai-iZn" secondAttribute="trailing" id="gLa-AO-gZ3"/>
-                                                <constraint firstItem="XUT-Ai-iZn" firstAttribute="top" secondItem="OFo-Ak-Z7a" secondAttribute="bottom" id="h5w-vz-Kai"/>
+                                                <constraint firstItem="OFo-Ak-Z7a" firstAttribute="centerY" secondItem="8UI-Jx-jXv" secondAttribute="centerY" id="lEa-ci-HEn"/>
                                             </constraints>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number">
@@ -325,9 +313,34 @@
                                                 <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
                                                     <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                    <color key="value" white="0.66666666669999997" alpha="0.62997645547945202" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                    <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowLeft">
+                                                    <real key="value" value="0.0"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowTop">
+                                                    <real key="value" value="3"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                    <real key="value" value="2"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                    <real key="value" value="0.20000000000000001"/>
+                                                </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="375" height="86"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <size key="customSize" width="364" height="86"/>
                                         <connections>
                                             <outlet property="btn_play" destination="8UI-Jx-jXv" id="Z1H-iL-sZw"/>
                                             <outlet property="constraint_right" destination="89T-bD-ZoY" id="fjT-9e-sPq"/>
@@ -347,10 +360,8 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="wT3-Pt-q1i" firstAttribute="leading" secondItem="BiC-j4-c3f" secondAttribute="leading" constant="5" id="DXB-yg-zbb"/>
-                            <constraint firstItem="wT3-Pt-q1i" firstAttribute="trailing" secondItem="BiC-j4-c3f" secondAttribute="trailing" constant="5" id="Pxs-J0-3LT"/>
+                            <constraint firstItem="wT3-Pt-q1i" firstAttribute="leading" secondItem="BiC-j4-c3f" secondAttribute="leading" id="DXB-yg-zbb"/>
                             <constraint firstItem="wT3-Pt-q1i" firstAttribute="bottom" secondItem="BiC-j4-c3f" secondAttribute="bottom" id="Pyu-VN-xaT"/>
-                            <constraint firstItem="wT3-Pt-q1i" firstAttribute="leading" secondItem="BiC-j4-c3f" secondAttribute="leading" id="Uwn-IO-DPz"/>
                             <constraint firstItem="wT3-Pt-q1i" firstAttribute="trailing" secondItem="BiC-j4-c3f" secondAttribute="trailing" id="jdv-s2-DzJ"/>
                             <constraint firstItem="wT3-Pt-q1i" firstAttribute="top" secondItem="BiC-j4-c3f" secondAttribute="top" id="qw5-Jn-tmo"/>
                         </constraints>
