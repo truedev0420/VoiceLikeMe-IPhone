@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="g7O-ae-Vjv">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -14,14 +14,14 @@
             <objects>
                 <viewController id="g7O-ae-Vjv" customClass="RecorderVC" customModule="VoiceLikeMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5UT-MO-zeg">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="dvf-Ad-GWH">
-                                <rect key="frame" x="30" y="50" width="315" height="587"/>
+                                <rect key="frame" x="30" y="50" width="260" height="488"/>
                                 <subviews>
                                     <stackView autoresizesSubviews="NO" opaque="NO" contentMode="right" distribution="equalCentering" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Qwn-4g-rig">
-                                        <rect key="frame" x="0.0" y="0.0" width="315" height="114.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="260" height="95"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PwT-YV-8Ve">
                                                 <rect key="frame" x="0.0" y="0.0" width="42" height="20.5"/>
@@ -30,7 +30,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button autoresizesSubviews="NO" opaque="NO" contentMode="topRight" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MNh-VW-Jnf" userLabel="Help Button" customClass="RoundButton" customModule="VoiceLikeMe" customModuleProvider="target">
-                                                <rect key="frame" x="285" y="0.0" width="30" height="30"/>
+                                                <rect key="frame" x="230" y="0.0" width="30" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="Gct-gQ-Oji"/>
                                                     <constraint firstAttribute="width" secondItem="MNh-VW-Jnf" secondAttribute="height" multiplier="1:1" id="Sb1-Ow-mWD"/>
@@ -52,19 +52,19 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="center" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="oun-CG-W2M">
-                                        <rect key="frame" x="0.0" y="114.5" width="315" height="472.5"/>
+                                        <rect key="frame" x="0.0" y="95" width="260" height="393"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OLq-Ea-nCP">
-                                                <rect key="frame" x="73" y="0.0" width="169" height="48"/>
+                                                <rect key="frame" x="45.5" y="0.0" width="169" height="48"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="bottom" horizontalHuggingPriority="150" verticalHuggingPriority="150" alignment="bottom" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="IoR-zY-o2x">
-                                                <rect key="frame" x="9.5" y="48" width="296" height="424.5"/>
+                                                <rect key="frame" x="0.0" y="48" width="260" height="345"/>
                                                 <subviews>
                                                     <button autoresizesSubviews="NO" opaque="NO" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z9y-84-Vr2" userLabel="Pause Button" customClass="RoundButton" customModule="VoiceLikeMe" customModuleProvider="target">
-                                                        <rect key="frame" x="8" y="376.5" width="40" height="40"/>
+                                                        <rect key="frame" x="8" y="297" width="40" height="40"/>
                                                         <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <rect key="contentStretch" x="0.0" y="0.0" width="0.5" height="1"/>
                                                         <constraints>
@@ -86,11 +86,11 @@
                                                         </connections>
                                                     </button>
                                                     <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HQb-hW-CFM" userLabel="Record Button" customClass="RoundButton" customModule="VoiceLikeMe" customModuleProvider="target">
-                                                        <rect key="frame" x="118" y="356.5" width="60" height="60"/>
+                                                        <rect key="frame" x="118" y="277" width="24" height="60"/>
                                                         <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <rect key="contentStretch" x="0.0" y="0.0" width="0.5" height="1"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" secondItem="HQb-hW-CFM" secondAttribute="height" multiplier="1:1" id="DHd-Qj-PAF"/>
+                                                            <constraint firstAttribute="width" secondItem="HQb-hW-CFM" secondAttribute="height" multiplier="1:1" constant="60" id="DHd-Qj-PAF"/>
                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="iEb-6m-SzV"/>
                                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="yrD-RR-O0d"/>
                                                         </constraints>
@@ -108,7 +108,7 @@
                                                         </connections>
                                                     </button>
                                                     <button hidden="YES" autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RDQ-8q-nz1" userLabel="Stop Button" customClass="RoundButton" customModule="VoiceLikeMe" customModuleProvider="target">
-                                                        <rect key="frame" x="213" y="356.5" width="60" height="60"/>
+                                                        <rect key="frame" x="177" y="277" width="60" height="60"/>
                                                         <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <rect key="contentStretch" x="0.0" y="0.0" width="0.5" height="1"/>
                                                         <constraints>
@@ -130,7 +130,7 @@
                                                         </connections>
                                                     </button>
                                                     <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kz6-cR-CLN" userLabel="PlayList Button" customClass="RoundButton" customModule="VoiceLikeMe" customModuleProvider="target">
-                                                        <rect key="frame" x="248" y="376.5" width="40" height="40"/>
+                                                        <rect key="frame" x="212" y="297" width="40" height="40"/>
                                                         <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <rect key="contentStretch" x="0.0" y="0.0" width="0.5" height="1"/>
                                                         <constraints>
@@ -163,14 +163,14 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" verticalHuggingPriority="251" fixedFrame="YES" text="Tap to start recording" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="ICm-Rb-g0a">
-                                <rect key="frame" x="86" y="320" width="203" height="27"/>
+                                <rect key="frame" x="86" y="320" width="148" height="0.0"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="24"/>
                                 <color key="textColor" red="0.95294117647058818" green="0.23137254901960785" blue="0.2627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="recording_paused" translatesAutoresizingMaskIntoConstraints="NO" id="R7o-vL-GFU" userLabel="Paused Image">
-                                <rect key="frame" x="0.0" y="217" width="375" height="282"/>
+                                <rect key="frame" x="0.0" y="185" width="320" height="240"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                             </imageView>
@@ -205,7 +205,7 @@
                 <navigationController id="YEk-jZ-JQL" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="rvn-vf-ipu"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7gC-Ff-PEo">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -221,11 +221,11 @@
             <objects>
                 <viewController id="kfW-xq-uEt" customClass="PlayerVC" customModule="VoiceLikeMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hJq-aJ-xel">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wT3-Pt-q1i">
-                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="12" id="ih9-Y0-tqY">
                                     <size key="itemSize" width="364" height="86"/>
@@ -235,7 +235,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PlayListCell" id="20c-dP-6Sx" customClass="PlayListCell" customModule="VoiceLikeMe" customModuleProvider="target">
-                                        <rect key="frame" x="5.5" y="10" width="364" height="86"/>
+                                        <rect key="frame" x="-22" y="10" width="364" height="86"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="J8d-jW-05a" customClass="MyUIView" customModule="VoiceLikeMe" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="364" height="86"/>
@@ -243,6 +243,11 @@
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OFo-Ak-Z7a" userLabel="ProgressBar">
                                                     <rect key="frame" x="0.0" y="0.0" width="20" height="86"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <integer key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20200410_082012.wav" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="D5d-kQ-SKp">
                                                     <rect key="frame" x="73" y="22" width="210" height="21"/>
@@ -253,13 +258,6 @@
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="coolvetica crammed rg"/>
                                                     </userDefinedRuntimeAttributes>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d2d-dm-tor">
-                                                    <rect key="frame" x="267" y="22" width="73" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="8UI-Jx-jXv">
                                                     <rect key="frame" x="8" y="15" width="57" height="56"/>
@@ -285,6 +283,13 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="4/10/2020, 8:20 AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="scM-5k-laV">
                                                     <rect key="frame" x="73" y="48" width="173" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00 /" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d2d-dm-tor">
+                                                    <rect key="frame" x="215" y="48" width="73" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>

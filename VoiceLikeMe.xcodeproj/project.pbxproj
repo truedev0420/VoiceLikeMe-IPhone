@@ -86,6 +86,8 @@
 		5476A4191FD98E7200F20B64 /* VoiceLikeMe */ = {
 			isa = PBXGroup;
 			children = (
+				A313AA79244B7B6600FFBEA0 /* Components */,
+				A3D51911244CA98F0040A23C /* Libraries */,
 				54F20E9C1FDC17EB00A2EC96 /* Controllers */,
 				54F20E9B1FDC17E600A2EC96 /* Views */,
 				54F20E9A1FDC17CD00A2EC96 /* Models */,
@@ -124,17 +126,9 @@
 		54F20E9C1FDC17EB00A2EC96 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				A313AA79244B7B6600FFBEA0 /* Components */,
-				A31B3D6C244A2ED50001DD16 /* PlayList */,
-				A33C35082449F34B0049537A /* SelectionDialog */,
+				A326E29D23853B5C005E5ED1 /* VoiceLikeMe-Bridging-Header.h */,
 				5476A41C1FD98E7200F20B64 /* RecorderVC.swift */,
 				A370A972244893B90093229C /* PlayerVC.swift */,
-				A326E29D23853B5C005E5ED1 /* VoiceLikeMe-Bridging-Header.h */,
-				A326E2A123853DC1005E5ED1 /* speex_process.h */,
-				A326E2A223853DC1005E5ED1 /* speex_process.c */,
-				A31CA5AA2387BEB200FDF890 /* ARFileManager.swift */,
-				A327D0212440CAFA007CDBD9 /* RoundButton.swift */,
-				A341B8162443EF0400E7013E /* iOSDevCenters+GIF.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -151,6 +145,9 @@
 		A313AA79244B7B6600FFBEA0 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				A33C35082449F34B0049537A /* SelectionDialog */,
+				A31B3D6C244A2ED50001DD16 /* PlayList */,
+				A327D0212440CAFA007CDBD9 /* RoundButton.swift */,
 				A313AA7A244B7B8200FFBEA0 /* MyUIView.swift */,
 			);
 			path = Components;
@@ -181,6 +178,17 @@
 				A33C350D2449F3C90049537A /* UIImageExtension.swift */,
 			);
 			path = SelectionDialog;
+			sourceTree = "<group>";
+		};
+		A3D51911244CA98F0040A23C /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				A341B8162443EF0400E7013E /* iOSDevCenters+GIF.swift */,
+				A31CA5AA2387BEB200FDF890 /* ARFileManager.swift */,
+				A326E2A123853DC1005E5ED1 /* speex_process.h */,
+				A326E2A223853DC1005E5ED1 /* speex_process.c */,
+			);
+			path = Libraries;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,7 +224,7 @@
 					5476A4161FD98E7100F20B64 = {
 						CreatedOnToolsVersion = 9.1;
 						LastSwiftMigration = 1100;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -408,8 +416,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NGN3A4C8QN;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -421,7 +429,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.appbestsmile.voicelikeme;
 				PRODUCT_NAME = VoiceLikeMe;
-				PROVISIONING_PROFILE_SPECIFIER = voicelikeme;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "VoiceLikeMe/Controllers/VoiceLikeMe-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;

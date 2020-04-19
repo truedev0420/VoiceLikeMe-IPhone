@@ -189,12 +189,15 @@ class PlayerVC: UIViewController {
                 }
                 
                 let filedate = getFileDate(filename : filename)
-                let playItem = PlayItem(filename: filename, duration: getFileDuration(filename:filename), filedate : filedate)
+                let playItem = PlayItem(filename: filename, duration: getFileDuration(filename:filename), filedate : filedate, fileCompareDate: getFileCompareDate(filename: filename))
+                
                 playList.append(playItem)
             }
         } catch {
             print("Error while enumerating files \(documentsURL.path): \(error.localizedDescription)")
         }
+        
+        playList.sort()
     }
     
     
@@ -238,10 +241,27 @@ class PlayerVC: UIViewController {
         let filePath = NSSearchPathForDirectoriesInDomains(.documentDirectory,.userDomainMask, true)[0] as String
         
         if let attributes = try? FileManager.default.attributesOfItem(atPath: filePath + "/" + filename) as [FileAttributeKey: Any],
-            let creationDate = attributes[FileAttributeKey.creationDate] as? Date {
+            let creationDate = attributes[FileAttributeKey.modificationDate] as? Date {
             
             let formatter = DateFormatter()
-            formatter.dateFormat = "dd/MM/yyyy"
+            formatter.dateFormat = "M/dd/yyyy, H:mm"
+            let filedate = formatter.string(from: creationDate)
+            return filedate
+        }
+        
+        return ""
+    }
+    
+    
+    func getFileCompareDate(filename : String) ->String {
+        
+        let filePath = NSSearchPathForDirectoriesInDomains(.documentDirectory,.userDomainMask, true)[0] as String
+        
+        if let attributes = try? FileManager.default.attributesOfItem(atPath: filePath + "/" + filename) as [FileAttributeKey: Any],
+            let creationDate = attributes[FileAttributeKey.modificationDate] as? Date {
+            
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyy/MM/dd, HH:mm::ss"
             let filedate = formatter.string(from: creationDate)
             return filedate
         }
@@ -249,6 +269,7 @@ class PlayerVC: UIViewController {
         return ""
     }
 
+    
     func getFileDuration(filename : String) ->String{
             
         let filePath = NSSearchPathForDirectoriesInDomains(.documentDirectory,.userDomainMask, true)[0] as String
