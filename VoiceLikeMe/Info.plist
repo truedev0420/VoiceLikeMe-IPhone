@@ -23,7 +23,7 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSMicrophoneUsageDescription</key>
-	<string>Fun Recorder needs access to microphone</string>
+	<string>VoiceLikeMe needs access to microphone</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>BebasNeue.otf</string>
