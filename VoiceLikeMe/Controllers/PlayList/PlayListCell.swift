@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class PlayListCell: UICollectionViewCell, AVAudioPlayerDelegate {
+@IBDesignable class PlayListCell: UICollectionViewCell, AVAudioPlayerDelegate {
     var item: PlayItem? {
         didSet {
             lbl_name.text = self.item?.filename
@@ -19,6 +19,7 @@ class PlayListCell: UICollectionViewCell, AVAudioPlayerDelegate {
             lbl_currentDuration.isHidden = true
         }
     }
+    
     var viewController: PlayerVC!
     
     @IBOutlet weak var btn_play: UIButton!
@@ -37,7 +38,6 @@ class PlayListCell: UICollectionViewCell, AVAudioPlayerDelegate {
     var playing: Bool = false
     
     func stop() {
-        
         player?.stop()
         self.progressBar.backgroundColor = UIColor(red: 1.0, green: 168 / 255, blue: 165 / 255, alpha: 0.0)
         playing = false

@@ -301,7 +301,7 @@ extension PlayerVC: UICollectionViewDataSource, UICollectionViewDelegateFlowLayo
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.bounds.width, height: 86)
+        return CGSize(width: collectionView.bounds.width - 16, height: 86)
     }
     
 }
