@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="g7O-ae-Vjv">
-    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -14,173 +14,186 @@
             <objects>
                 <viewController id="g7O-ae-Vjv" customClass="RecorderVC" customModule="VoiceLikeMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5UT-MO-zeg">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="dvf-Ad-GWH">
-                                <rect key="frame" x="30" y="50" width="260" height="488"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lR4-o3-F0k">
+                                <rect key="frame" x="30" y="50" width="315" height="587"/>
                                 <subviews>
-                                    <stackView autoresizesSubviews="NO" opaque="NO" contentMode="right" distribution="equalCentering" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Qwn-4g-rig">
-                                        <rect key="frame" x="0.0" y="0.0" width="260" height="95"/>
+                                    <button autoresizesSubviews="NO" opaque="NO" contentMode="topRight" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MNh-VW-Jnf" userLabel="Help Button" customClass="RoundButton" customModule="VoiceLikeMe" customModuleProvider="target">
+                                        <rect key="frame" x="285" y="0.0" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="pZR-Pt-bY2"/>
+                                            <constraint firstAttribute="width" constant="30" id="wLA-ag-ntH"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" backgroundImage="ic_help_black_24dp">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="50"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="showHelp:" destination="g7O-ae-Vjv" eventType="touchUpInside" id="wDU-6p-bS0"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OLq-Ea-nCP">
+                                        <rect key="frame" x="73" y="130.5" width="169" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VbQ-dB-VHh">
+                                        <rect key="frame" x="0.0" y="193.5" width="315" height="236"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PwT-YV-8Ve">
-                                                <rect key="frame" x="0.0" y="0.0" width="42" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button autoresizesSubviews="NO" opaque="NO" contentMode="topRight" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MNh-VW-Jnf" userLabel="Help Button" customClass="RoundButton" customModule="VoiceLikeMe" customModuleProvider="target">
-                                                <rect key="frame" x="230" y="0.0" width="30" height="30"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="recording_paused" translatesAutoresizingMaskIntoConstraints="NO" id="R7o-vL-GFU" userLabel="Paused Image">
+                                                <rect key="frame" x="0.0" y="0.0" width="315" height="236"/>
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="R7o-vL-GFU" secondAttribute="trailing" id="1If-ZZ-D5j"/>
+                                            <constraint firstAttribute="width" secondItem="VbQ-dB-VHh" secondAttribute="height" multiplier="4:3" id="21q-BF-9UH"/>
+                                            <constraint firstItem="R7o-vL-GFU" firstAttribute="top" secondItem="VbQ-dB-VHh" secondAttribute="top" id="YBb-jD-n8H"/>
+                                            <constraint firstAttribute="bottom" secondItem="R7o-vL-GFU" secondAttribute="bottom" id="dbn-U8-yrA"/>
+                                            <constraint firstItem="R7o-vL-GFU" firstAttribute="leading" secondItem="VbQ-dB-VHh" secondAttribute="leading" id="tLq-Ip-8eD"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" verticalHuggingPriority="251" text="Tap to start recording" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="ICm-Rb-g0a">
+                                        <rect key="frame" x="34.5" y="280" width="246" height="27"/>
+                                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="24"/>
+                                        <color key="textColor" red="0.95294117647058818" green="0.23137254901960785" blue="0.2627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iAX-wP-vdN">
+                                        <rect key="frame" x="0.0" y="527" width="315" height="60"/>
+                                        <subviews>
+                                            <button hidden="YES" autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RDQ-8q-nz1" userLabel="Stop Button" customClass="RoundButton" customModule="VoiceLikeMe" customModuleProvider="target">
+                                                <rect key="frame" x="127.5" y="0.0" width="60" height="60"/>
+                                                <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <rect key="contentStretch" x="0.0" y="0.0" width="0.5" height="1"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="Gct-gQ-Oji"/>
-                                                    <constraint firstAttribute="width" secondItem="MNh-VW-Jnf" secondAttribute="height" multiplier="1:1" id="Sb1-Ow-mWD"/>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="UCn-o7-bhl"/>
+                                                    <constraint firstAttribute="width" constant="60" id="0CD-Dg-2Y3"/>
+                                                    <constraint firstAttribute="height" constant="60" id="wGZ-u7-QJZ"/>
                                                 </constraints>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" backgroundImage="ic_help_black_24dp">
-                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                                <state key="normal" image="ic_media_stop">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="50"/>
+                                                        <real key="value" value="30"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="showHelp:" destination="g7O-ae-Vjv" eventType="touchUpInside" id="wDU-6p-bS0"/>
+                                                    <action selector="stopRecording:" destination="g7O-ae-Vjv" eventType="touchUpInside" id="Xkk-iv-ccn"/>
+                                                </connections>
+                                            </button>
+                                            <button autoresizesSubviews="NO" opaque="NO" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z9y-84-Vr2" userLabel="Pause Button" customClass="RoundButton" customModule="VoiceLikeMe" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="10" width="40" height="40"/>
+                                                <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <rect key="contentStretch" x="0.0" y="0.0" width="0.5" height="1"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="NVk-vx-nMh"/>
+                                                    <constraint firstAttribute="height" constant="40" id="sc3-8V-7Ax"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="ic_media_pause">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="pauseRecording:" destination="g7O-ae-Vjv" eventType="touchUpInside" id="EPs-lG-BRV"/>
+                                                </connections>
+                                            </button>
+                                            <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HQb-hW-CFM" userLabel="Record Button" customClass="RoundButton" customModule="VoiceLikeMe" customModuleProvider="target">
+                                                <rect key="frame" x="127.5" y="0.0" width="60" height="60"/>
+                                                <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <rect key="contentStretch" x="0.0" y="0.0" width="0.5" height="1"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="60" id="OcB-tC-89s"/>
+                                                    <constraint firstAttribute="height" constant="60" id="g3N-Xu-FOw"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="ic_media_record">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="30"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="recordAudio:" destination="g7O-ae-Vjv" eventType="touchUpInside" id="xJk-EA-fU0"/>
+                                                </connections>
+                                            </button>
+                                            <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kz6-cR-CLN" userLabel="PlayList Button" customClass="RoundButton" customModule="VoiceLikeMe" customModuleProvider="target">
+                                                <rect key="frame" x="275" y="10" width="40" height="40"/>
+                                                <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <rect key="contentStretch" x="0.0" y="0.0" width="0.5" height="1"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="0Ne-bQ-4k1"/>
+                                                    <constraint firstAttribute="height" constant="40" id="gGq-8C-RJo"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="ic_playlist_white">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <segue destination="YEk-jZ-JQL" kind="presentation" modalPresentationStyle="fullScreen" id="mri-lg-sNv"/>
                                                 </connections>
                                             </button>
                                         </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="center" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="oun-CG-W2M">
-                                        <rect key="frame" x="0.0" y="95" width="260" height="393"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OLq-Ea-nCP">
-                                                <rect key="frame" x="45.5" y="0.0" width="169" height="48"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <stackView opaque="NO" contentMode="bottom" horizontalHuggingPriority="150" verticalHuggingPriority="150" alignment="bottom" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="IoR-zY-o2x">
-                                                <rect key="frame" x="0.0" y="48" width="260" height="345"/>
-                                                <subviews>
-                                                    <button autoresizesSubviews="NO" opaque="NO" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z9y-84-Vr2" userLabel="Pause Button" customClass="RoundButton" customModule="VoiceLikeMe" customModuleProvider="target">
-                                                        <rect key="frame" x="8" y="297" width="40" height="40"/>
-                                                        <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <rect key="contentStretch" x="0.0" y="0.0" width="0.5" height="1"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" secondItem="Z9y-84-Vr2" secondAttribute="height" multiplier="1:1" id="Tzd-He-TpV"/>
-                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="Y1p-2M-7G5"/>
-                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="pl0-Pg-0vj"/>
-                                                        </constraints>
-                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <state key="normal" image="ic_media_pause">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </state>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                <real key="value" value="20"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                        <connections>
-                                                            <action selector="pauseRecording:" destination="g7O-ae-Vjv" eventType="touchUpInside" id="EPs-lG-BRV"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HQb-hW-CFM" userLabel="Record Button" customClass="RoundButton" customModule="VoiceLikeMe" customModuleProvider="target">
-                                                        <rect key="frame" x="118" y="277" width="24" height="60"/>
-                                                        <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <rect key="contentStretch" x="0.0" y="0.0" width="0.5" height="1"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" secondItem="HQb-hW-CFM" secondAttribute="height" multiplier="1:1" constant="60" id="DHd-Qj-PAF"/>
-                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="iEb-6m-SzV"/>
-                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="yrD-RR-O0d"/>
-                                                        </constraints>
-                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <state key="normal" image="ic_media_record">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </state>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                <real key="value" value="30"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                        <connections>
-                                                            <action selector="recordAudio:" destination="g7O-ae-Vjv" eventType="touchUpInside" id="xJk-EA-fU0"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button hidden="YES" autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RDQ-8q-nz1" userLabel="Stop Button" customClass="RoundButton" customModule="VoiceLikeMe" customModuleProvider="target">
-                                                        <rect key="frame" x="177" y="277" width="60" height="60"/>
-                                                        <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <rect key="contentStretch" x="0.0" y="0.0" width="0.5" height="1"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" secondItem="RDQ-8q-nz1" secondAttribute="height" multiplier="1:1" id="SW2-Wn-gFO"/>
-                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="fWp-CE-IVG"/>
-                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="uQg-9q-OBf"/>
-                                                        </constraints>
-                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <state key="normal" image="ic_media_stop">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </state>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                <real key="value" value="30"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                        <connections>
-                                                            <action selector="stopRecording:" destination="g7O-ae-Vjv" eventType="touchUpInside" id="Xkk-iv-ccn"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kz6-cR-CLN" userLabel="PlayList Button" customClass="RoundButton" customModule="VoiceLikeMe" customModuleProvider="target">
-                                                        <rect key="frame" x="212" y="297" width="40" height="40"/>
-                                                        <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <rect key="contentStretch" x="0.0" y="0.0" width="0.5" height="1"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" secondItem="Kz6-cR-CLN" secondAttribute="height" multiplier="1:1" id="Amp-p6-lwz"/>
-                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="BqF-k7-cO9"/>
-                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="szs-LI-Kr5"/>
-                                                        </constraints>
-                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <state key="normal" image="ic_playlist_white">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </state>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                <real key="value" value="20"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                        <connections>
-                                                            <segue destination="YEk-jZ-JQL" kind="presentation" modalPresentationStyle="fullScreen" id="mri-lg-sNv"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstItem="RDQ-8q-nz1" firstAttribute="width" secondItem="RDQ-8q-nz1" secondAttribute="height" multiplier="1:1" id="8hx-qc-SRE"/>
-                                                    <constraint firstItem="Kz6-cR-CLN" firstAttribute="width" secondItem="Kz6-cR-CLN" secondAttribute="height" multiplier="1:1" id="AG7-xo-OVt"/>
-                                                </constraints>
-                                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
-                                            </stackView>
-                                        </subviews>
-                                    </stackView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Kz6-cR-CLN" secondAttribute="trailing" id="03M-b4-mOH"/>
+                                            <constraint firstItem="RDQ-8q-nz1" firstAttribute="top" secondItem="iAX-wP-vdN" secondAttribute="top" id="10x-4B-uvW"/>
+                                            <constraint firstItem="RDQ-8q-nz1" firstAttribute="centerX" secondItem="iAX-wP-vdN" secondAttribute="centerX" id="Dmr-lz-GyR"/>
+                                            <constraint firstItem="Z9y-84-Vr2" firstAttribute="leading" secondItem="iAX-wP-vdN" secondAttribute="leading" id="Ebw-6M-UTu"/>
+                                            <constraint firstAttribute="bottom" secondItem="RDQ-8q-nz1" secondAttribute="bottom" id="HHp-Qm-rH8"/>
+                                            <constraint firstItem="HQb-hW-CFM" firstAttribute="centerX" secondItem="iAX-wP-vdN" secondAttribute="centerX" id="X8g-uO-0I4"/>
+                                            <constraint firstItem="Z9y-84-Vr2" firstAttribute="centerY" secondItem="iAX-wP-vdN" secondAttribute="centerY" id="fSr-51-JJv"/>
+                                            <constraint firstItem="HQb-hW-CFM" firstAttribute="centerY" secondItem="iAX-wP-vdN" secondAttribute="centerY" id="jUu-hI-YP8"/>
+                                            <constraint firstAttribute="height" constant="60" id="orD-TA-Nv4"/>
+                                            <constraint firstItem="Kz6-cR-CLN" firstAttribute="centerY" secondItem="iAX-wP-vdN" secondAttribute="centerY" id="zlz-su-cZW"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
-                            </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" verticalHuggingPriority="251" fixedFrame="YES" text="Tap to start recording" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="ICm-Rb-g0a">
-                                <rect key="frame" x="86" y="320" width="148" height="0.0"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="24"/>
-                                <color key="textColor" red="0.95294117647058818" green="0.23137254901960785" blue="0.2627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="recording_paused" translatesAutoresizingMaskIntoConstraints="NO" id="R7o-vL-GFU" userLabel="Paused Image">
-                                <rect key="frame" x="0.0" y="185" width="320" height="240"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
-                            </imageView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="iAX-wP-vdN" firstAttribute="leading" secondItem="lR4-o3-F0k" secondAttribute="leading" id="23V-F4-yMe"/>
+                                    <constraint firstAttribute="trailing" secondItem="MNh-VW-Jnf" secondAttribute="trailing" id="3Dt-Rq-ocB"/>
+                                    <constraint firstItem="ICm-Rb-g0a" firstAttribute="centerX" secondItem="lR4-o3-F0k" secondAttribute="centerX" id="D8Q-eZ-LUp"/>
+                                    <constraint firstItem="MNh-VW-Jnf" firstAttribute="top" secondItem="lR4-o3-F0k" secondAttribute="top" id="EdC-ez-AAB"/>
+                                    <constraint firstAttribute="bottom" secondItem="iAX-wP-vdN" secondAttribute="bottom" id="MO0-3P-5yC"/>
+                                    <constraint firstItem="VbQ-dB-VHh" firstAttribute="centerY" secondItem="lR4-o3-F0k" secondAttribute="centerY" constant="18" id="OAq-CP-JJB"/>
+                                    <constraint firstItem="VbQ-dB-VHh" firstAttribute="top" secondItem="OLq-Ea-nCP" secondAttribute="bottom" constant="15" id="XdV-ZN-bJG"/>
+                                    <constraint firstItem="VbQ-dB-VHh" firstAttribute="leading" secondItem="lR4-o3-F0k" secondAttribute="leading" id="aT2-1M-kYk"/>
+                                    <constraint firstAttribute="trailing" secondItem="iAX-wP-vdN" secondAttribute="trailing" id="gU0-qU-h9r"/>
+                                    <constraint firstItem="OLq-Ea-nCP" firstAttribute="centerX" secondItem="lR4-o3-F0k" secondAttribute="centerX" id="gp9-Ws-gWi"/>
+                                    <constraint firstItem="ICm-Rb-g0a" firstAttribute="centerY" secondItem="lR4-o3-F0k" secondAttribute="centerY" id="tlr-mF-rAg"/>
+                                    <constraint firstAttribute="trailing" secondItem="VbQ-dB-VHh" secondAttribute="trailing" id="uS4-HU-a6u"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="dvf-Ad-GWH" firstAttribute="leading" secondItem="zeS-jf-nj0" secondAttribute="leading" constant="30" id="GhD-YM-egR"/>
-                            <constraint firstItem="zeS-jf-nj0" firstAttribute="trailing" secondItem="dvf-Ad-GWH" secondAttribute="trailing" constant="30" id="egf-Ec-Uaz"/>
-                            <constraint firstItem="dvf-Ad-GWH" firstAttribute="top" secondItem="zeS-jf-nj0" secondAttribute="top" constant="50" id="heu-QF-MDq"/>
-                            <constraint firstItem="zeS-jf-nj0" firstAttribute="bottom" secondItem="dvf-Ad-GWH" secondAttribute="bottom" constant="30" id="wNc-PK-0Oo"/>
+                            <constraint firstItem="zeS-jf-nj0" firstAttribute="bottom" secondItem="lR4-o3-F0k" secondAttribute="bottom" constant="30" id="Gvp-gn-Lc5"/>
+                            <constraint firstItem="lR4-o3-F0k" firstAttribute="leading" secondItem="zeS-jf-nj0" secondAttribute="leading" constant="30" id="JsF-Fn-iXT"/>
+                            <constraint firstItem="lR4-o3-F0k" firstAttribute="top" secondItem="zeS-jf-nj0" secondAttribute="top" constant="50" id="RB6-qH-6GF"/>
+                            <constraint firstItem="zeS-jf-nj0" firstAttribute="trailing" secondItem="lR4-o3-F0k" secondAttribute="trailing" constant="30" id="kji-SR-m9q"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zeS-jf-nj0"/>
                     </view>
@@ -188,6 +201,7 @@
                         <outlet property="helpBtn" destination="MNh-VW-Jnf" id="Vtz-QO-pFo"/>
                         <outlet property="pauseBtn" destination="Z9y-84-Vr2" id="54d-Cp-fah"/>
                         <outlet property="pausedImage" destination="R7o-vL-GFU" id="pIc-zm-Ui4"/>
+                        <outlet property="pausedImageWrapper" destination="VbQ-dB-VHh" id="49K-GK-o8N"/>
                         <outlet property="playListBtn" destination="Kz6-cR-CLN" id="c2v-X4-LX5"/>
                         <outlet property="recordBtn" destination="HQb-hW-CFM" id="q6t-gg-vno"/>
                         <outlet property="recordingLabel" destination="ICm-Rb-g0a" id="SEU-t8-bSj"/>
@@ -197,7 +211,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cjq-Ei-uUA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="840.79999999999995" y="114.69265367316342"/>
+            <point key="canvasLocation" x="840" y="114.08450704225352"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9PN-iv-nR8">
@@ -205,7 +219,7 @@
                 <navigationController id="YEk-jZ-JQL" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="rvn-vf-ipu"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7gC-Ff-PEo">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -221,11 +235,11 @@
             <objects>
                 <viewController id="kfW-xq-uEt" customClass="PlayerVC" customModule="VoiceLikeMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hJq-aJ-xel">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wT3-Pt-q1i">
-                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="12" id="ih9-Y0-tqY">
                                     <size key="itemSize" width="364" height="86"/>
@@ -235,7 +249,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PlayListCell" id="20c-dP-6Sx" customClass="PlayListCell" customModule="VoiceLikeMe" customModuleProvider="target">
-                                        <rect key="frame" x="-22" y="10" width="364" height="86"/>
+                                        <rect key="frame" x="5.5" y="10" width="364" height="86"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="J8d-jW-05a" customClass="MyUIView" customModule="VoiceLikeMe" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="364" height="86"/>

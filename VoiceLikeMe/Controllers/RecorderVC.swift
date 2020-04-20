@@ -39,9 +39,9 @@ class RecorderVC: UIViewController {
     @IBOutlet weak var recordingLabel   : UILabel!
     @IBOutlet weak var timerLabel       : UILabel!
     
+    @IBOutlet weak var pausedImageWrapper: UIView!
     @IBOutlet weak var pausedImage: UIImageView!
-    var recordingImage : UIImageView!
-    
+
     
     var counter = 0
     var timer = Timer()
@@ -49,30 +49,19 @@ class RecorderVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadRecordingImage()
-        
         updateRecordingStatus(recording: RecordingStatus.Stopped)
     }
-    
-    func loadRecordingImage(){
-        
+    lazy var recordingImage: UIImageView = {
         let recordingGif = UIImage.gifImageWithName("recording")
         let imageView = UIImageView(image: recordingGif)
-        imageView.frame = CGRect(x: pausedImage.frame.origin.x, y: pausedImage.frame.origin.y, width: pausedImage.frame.size.width, height: pausedImage.frame.size.width * 0.75)
-        view.addSubview(imageView)
-        
-        recordingImage = imageView
-    }
-    
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "stopRecordingSG"{
-////            let playSoundsVC = segue.destination as! PlaySoundsVC
-////            let recordedAudioURL = sender as! URL
-////
-////            playSoundsVC.recordedAudioURL = recordedAudioURL
-//        }
-//    }
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        self.pausedImageWrapper.addSubview(imageView)
+        imageView.widthAnchor.constraint(equalTo: self.pausedImageWrapper.widthAnchor).isActive = true
+        imageView.heightAnchor.constraint(equalTo: self.pausedImageWrapper.heightAnchor).isActive = true
+        imageView.trailingAnchor.constraint(equalTo: self.pausedImageWrapper.trailingAnchor).isActive = true
+        imageView.topAnchor.constraint(equalTo: self.pausedImageWrapper.topAnchor).isActive = true
+        return imageView
+    }()
     
     func customAlert(title: String, message: String){
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -121,9 +110,6 @@ class RecorderVC: UIViewController {
             
             startTimer()
             break
-            
-        default : break
-            
         }
     }
     
@@ -338,7 +324,7 @@ extension RecorderVC: AVAudioRecorderDelegate{
         
         if flag {
             
-            let destFilePath = waveFilePath + "/" + convertedFileName
+//            let destFilePath = waveFilePath + "/" + convertedFileName
                         
 //            performSegue(withIdentifier: "stopRecordingSG", sender: audioRecorder.url)
 //            performSegue(withIdentifier: "stopRecordingSG", sender : URL(string : destFilePath))
