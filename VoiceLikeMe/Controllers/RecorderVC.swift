@@ -413,7 +413,7 @@ extension RecorderVC: AVAudioRecorderDelegate{
         let arFileManager = ARFileManager()
         
         let formatter = DateFormatter()
-        formatter.dateFormat = "yyyyMMdd_HHmmss"
+        formatter.dateFormat = "yyMMdd_HHmmss"
         let wavFileName = formatter.string(from: Date()) + ".wav"
 
         try! arFileManager.createWavFile(rawData : rawData!, filename : wavFileName, sampleRate : sampleRate)

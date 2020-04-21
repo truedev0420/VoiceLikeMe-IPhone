@@ -280,12 +280,22 @@ class PlayerVC: UIViewController {
            if let fileSize = attribute[FileAttributeKey.size] as? UInt32 {
                
                 print("filesize : " + String(fileSize))
-                let totalSeconds = ceil(Double(fileSize - 44) / 44100) / 2
+                var totalSeconds = ceil(Double(fileSize - 44) / 44100) / 2
             
+                let hours = floor(totalSeconds / 3600)
+                totalSeconds = totalSeconds - hours * 3600
                 let minutes = floor(totalSeconds / 60)
                 let seconds = totalSeconds - 60  * minutes
                 
-                let duration = String(format:"%02d:%02d", Int(minutes), Int(seconds))
+                let duration : String
+            
+                if(hours != 0){
+                    duration = String(format:"%02d:%02d:%02d", Int(hours), Int(minutes), Int(seconds))
+                }
+                else{
+                    duration = String(format:"%02d:%02d", Int(minutes), Int(seconds))
+                }
+                    
                 return duration
            }
         } catch {

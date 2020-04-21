@@ -74,7 +74,13 @@ import AVFoundation
                 timer = Timer.scheduledTimer(withTimeInterval: 0.02, repeats: true) { timer in
                     
                     self.constraint_right.constant = -self.bounds.width * CGFloat(Float(self.player!.currentTime / self.player!.duration))
-                    self.lbl_currentDuration.text = String(format: "%02d:%02d /", Int(self.player!.currentTime) / 60, Int(self.player!.currentTime) % 60)
+                    
+                    if(Int(self.player!.duration) / 3600 > 0){
+                        self.lbl_currentDuration.text = String(format: "%02d:%02d:%02d", Int(self.player!.currentTime) / 3600, Int(self.player!.currentTime) % 3600 / 60, Int(self.player!.currentTime) % 60)
+                    }else{
+                        self.lbl_currentDuration.text = String(format: "%02d:%02d", Int(self.player!.currentTime) / 60, Int(self.player!.currentTime) % 60)
+                    }
+                    
                 }
                 
                 player?.delegate = self
