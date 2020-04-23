@@ -11,13 +11,8 @@ import AVFoundation
 
 class PlayerVC: UIViewController {
 
+    @IBOutlet weak var btnBack: UIBarButtonItem!
     @IBOutlet weak var collectionView: UICollectionView!
-    
-    let DIALOG_TITLE = "Options"
-    let OPTION_SHARE = "Share File"
-    let OPTION_RENAME = "Rename File"
-    let OPTION_DELETE = "Delete File"
-    let OPTION_REPLAY = "Replay File"
     
     let DOCUMENT_ROOT = NSSearchPathForDirectoriesInDomains(.documentDirectory,.userDomainMask, true)[0] as String
 
@@ -41,6 +36,8 @@ class PlayerVC: UIViewController {
         longPressGR.minimumPressDuration = 0.5
         longPressGR.delaysTouchesBegan = true
         self.collectionView.addGestureRecognizer(longPressGR)
+        
+        btnBack.title = NSLocalizedString("Back", comment: "")
     }
     
     
@@ -60,7 +57,7 @@ class PlayerVC: UIViewController {
             
             // =====        Show Options Dialog         ===== //
             
-            let dialog = SelectionDialog(title: DIALOG_TITLE, closeButtonTitle: "Close")
+            let dialog = SelectionDialog(title: NSLocalizedString("Options", comment: ""), closeButtonTitle: NSLocalizedString("Close", comment: ""))
             
 //            dialog.addItem(item: "I have icon :)",
 //                           icon: UIImage(named: "Icon1")!)
@@ -69,7 +66,7 @@ class PlayerVC: UIViewController {
             
             // =====        Share File          ===== //
             
-            dialog.addItem(item: OPTION_SHARE, didTapHandler:  { () in
+            dialog.addItem(item: NSLocalizedString("Share File", comment: ""), didTapHandler:  { () in
                                    
                 dialog.close()
 
@@ -84,16 +81,16 @@ class PlayerVC: UIViewController {
             
             // =====         Rename File         ===== //
             
-            dialog.addItem(item: OPTION_RENAME, didTapHandler:  { () in
+            dialog.addItem(item: NSLocalizedString("Rename File", comment: ""), didTapHandler:  { () in
             
                 dialog.close()
 
-                let alert = UIAlertController(title: "Rename File", message: "", preferredStyle: .alert)
+                let alert = UIAlertController(title: NSLocalizedString("Rename File", comment: ""), message: "", preferredStyle: .alert)
                 alert.addTextField { (textField) in
                     textField.text = self.playList[indexPath.row].filename
                 }
 
-                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
+                alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: .default, handler: { [weak alert] (_) in
                     let textField = alert?.textFields![0] // Force unwrapping because we know it exists.
                     let newFileName = textField?.text
                     
@@ -110,6 +107,10 @@ class PlayerVC: UIViewController {
                     self.loadData()
                     
                 }))
+                
+                alert.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .cancel, handler: { (action: UIAlertAction!) in
+                    print("Handle Cancel Logic here")
+                }))
 
                 self.present(alert, animated: true, completion: nil)
             })
@@ -117,13 +118,13 @@ class PlayerVC: UIViewController {
             
             // =====            Delete File         ===== //
             
-            dialog.addItem(item: OPTION_DELETE, didTapHandler:  { () in
+            dialog.addItem(item: NSLocalizedString("Delete File", comment: ""), didTapHandler:  { () in
                 
                 dialog.close()
                 
-                let refreshAlert = UIAlertController(title: "Confirm Delete", message: "Are you sure you would like to delete this file?", preferredStyle: UIAlertControllerStyle.alert)
+                let refreshAlert = UIAlertController(title: NSLocalizedString("Confirm Delete", comment: ""), message: NSLocalizedString("Are you sure you would like to delete this file?", comment: ""), preferredStyle: UIAlertControllerStyle.alert)
 
-                refreshAlert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action: UIAlertAction!) in
+                refreshAlert.addAction(UIAlertAction(title: NSLocalizedString("Yes", comment: ""), style: .default, handler: { (action: UIAlertAction!) in
                     
                     let destFilePath = self.DOCUMENT_ROOT + "/"  + self.playList[indexPath.row].filename
                     let fileManager = FileManager.default
@@ -136,7 +137,7 @@ class PlayerVC: UIViewController {
                     self.loadData()
                 }))
 
-                refreshAlert.addAction(UIAlertAction(title: "NO", style: .cancel, handler: { (action: UIAlertAction!) in
+                refreshAlert.addAction(UIAlertAction(title: NSLocalizedString("NO", comment: ""), style: .cancel, handler: { (action: UIAlertAction!) in
                   print("Handle Cancel Logic here")
                   }))
 
@@ -146,20 +147,24 @@ class PlayerVC: UIViewController {
             
             // =====            Replay File         ===== //
             
-            dialog.addItem(item: OPTION_REPLAY, didTapHandler:  { () in
+            dialog.addItem(item: NSLocalizedString("Replay File", comment: ""), didTapHandler:  { () in
             
                 dialog.close()
 
-                let alert = UIAlertController(title: "Replay File", message: "", preferredStyle: .alert)
+                let alert = UIAlertController(title: NSLocalizedString("Replay File", comment: ""), message: "", preferredStyle: .alert)
                 alert.addTextField { (textField) in
                 }
 
-                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
+                alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: .default, handler: { [weak alert] (_) in
                     let textField = alert?.textFields![0] // Force unwrapping because we know it exists.
                     let textValue = textField?.text!
                        
                     let currentCell : PlayListCell = self.collectionView.cellForItem(at: indexPath) as! PlayListCell
                     currentCell.replay(playCount: Int(textValue ?? "1") ?? 1)
+                }))
+                
+                alert.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .cancel, handler: { (action: UIAlertAction!) in
+                    print("Handle Cancel Logic here")
                 }))
 
                 self.present(alert, animated: true, completion: nil)

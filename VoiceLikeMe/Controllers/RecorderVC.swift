@@ -50,9 +50,25 @@ class RecorderVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateRecordingStatus(recording: RecordingStatus.Stopped)
+        
+        InitLanguage()
     }
+    
+    func InitLanguage() {
+        
+        recordingLabel.text = NSLocalizedString("Tap to start recording", comment: "")
+    }
+    
     lazy var recordingImage: UIImageView = {
-        let recordingGif = UIImage.gifImageWithName("recording")
+        
+        let recordingGif = UIImage.gifImageWithName(NSLocalizedString("recording", comment: ""))
+            
+//        if(Global.IsJapanese()){
+//            recordingGif = UIImage.gifImageWithName("recording_jap")
+//        }else{
+//            recordingGif = UIImage.gifImageWithName("recording")
+//        }
+        
         let imageView = UIImageView(image: recordingGif)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         self.pausedImageWrapper.addSubview(imageView)

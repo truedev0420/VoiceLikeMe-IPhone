@@ -1,0 +1,26 @@
+/* 
+  Localizable.strings
+  VoiceLikeMe
+
+  Created by Alguz on 4/23/20.
+  Copyright © 2020 Andre Rosa. All rights reserved.
+*/
+
+"Tap to start recording" = "録音ボタンをタップ";
+"recording" = "recording_jap";
+
+
+"Options" = "オプション";
+"Share File" = "ファイルをシェア";
+"Rename File" = "ファイル名変更";
+"Delete File" = "ファイルを削除";
+"Replay File" = "ファイルリプレイ";
+"Confirm Delete" = "削除を確認";
+"Are you sure you would like to delete this file?" = "このファイルを削除してもよろしいですか？";
+
+"OK" = "オーケー";
+"Cancel" = "キャンセル";
+"Yes" = "はい";
+"NO" = "番号";
+"Close" = "閉じる";
+"Back" = "バック";

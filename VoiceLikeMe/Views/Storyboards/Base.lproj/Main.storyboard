@@ -394,6 +394,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="btnBack" destination="mBm-rP-mdP" id="uxp-JD-CUG"/>
                         <outlet property="collectionView" destination="wT3-Pt-q1i" id="tpc-iO-aCp"/>
                     </connections>
                 </viewController>

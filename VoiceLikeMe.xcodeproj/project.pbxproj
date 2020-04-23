@@ -14,11 +14,14 @@
 		5476A4251FD98E7200F20B64 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5476A4231FD98E7200F20B64 /* LaunchScreen.storyboard */; };
 		A305140624440092008131EC /* recording.gif in Resources */ = {isa = PBXBuildFile; fileRef = A305140524440092008131EC /* recording.gif */; };
 		A313AA7B244B7B8200FFBEA0 /* MyUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A313AA7A244B7B8200FFBEA0 /* MyUIView.swift */; };
+		A319681C2451C606001AA7E8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A319681E2451C606001AA7E8 /* Localizable.strings */; };
 		A31B3D6E244A2EE40001DD16 /* PlayListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31B3D6D244A2EE40001DD16 /* PlayListCell.swift */; };
 		A31B3D70244A2F2A0001DD16 /* PlayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31B3D6F244A2F2A0001DD16 /* PlayItem.swift */; };
 		A31CA5AB2387BEB200FDF890 /* ARFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31CA5AA2387BEB200FDF890 /* ARFileManager.swift */; };
 		A326E2A323853DC1005E5ED1 /* speex_process.c in Sources */ = {isa = PBXBuildFile; fileRef = A326E2A223853DC1005E5ED1 /* speex_process.c */; };
 		A327D0222440CAFA007CDBD9 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A327D0212440CAFA007CDBD9 /* RoundButton.swift */; };
+		A32A909E24517B0400C978B4 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32A909D24517B0400C978B4 /* Global.swift */; };
+		A32A90B424517D8C00C978B4 /* recording_jap.gif in Resources */ = {isa = PBXBuildFile; fileRef = A32A90B324517D8C00C978B4 /* recording_jap.gif */; };
 		A33C350A2449F3620049537A /* SelectionDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33C35092449F3620049537A /* SelectionDialog.swift */; };
 		A33C350C2449F3910049537A /* SelectionDialogItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33C350B2449F3910049537A /* SelectionDialogItem.swift */; };
 		A33C350E2449F3C90049537A /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33C350D2449F3C90049537A /* UIImageExtension.swift */; };
@@ -38,6 +41,9 @@
 		5476A4261FD98E7200F20B64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A305140524440092008131EC /* recording.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = recording.gif; sourceTree = "<group>"; };
 		A313AA7A244B7B8200FFBEA0 /* MyUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyUIView.swift; sourceTree = "<group>"; };
+		A31968182451C49D001AA7E8 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		A31968192451C49D001AA7E8 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		A319681D2451C606001AA7E8 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A31B3D6D244A2EE40001DD16 /* PlayListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayListCell.swift; sourceTree = "<group>"; };
 		A31B3D6F244A2F2A0001DD16 /* PlayItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayItem.swift; sourceTree = "<group>"; };
 		A31CA5AA2387BEB200FDF890 /* ARFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARFileManager.swift; sourceTree = "<group>"; };
@@ -45,6 +51,8 @@
 		A326E2A123853DC1005E5ED1 /* speex_process.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = speex_process.h; sourceTree = "<group>"; };
 		A326E2A223853DC1005E5ED1 /* speex_process.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = speex_process.c; sourceTree = "<group>"; };
 		A327D0212440CAFA007CDBD9 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		A32A909D24517B0400C978B4 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		A32A90B324517D8C00C978B4 /* recording_jap.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = recording_jap.gif; sourceTree = "<group>"; };
 		A33C35092449F3620049537A /* SelectionDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionDialog.swift; sourceTree = "<group>"; };
 		A33C350B2449F3910049537A /* SelectionDialogItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionDialogItem.swift; sourceTree = "<group>"; };
 		A33C350D2449F3C90049537A /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
@@ -102,8 +110,10 @@
 			isa = PBXGroup;
 			children = (
 				A39C2A102449E48500DF0662 /* coolvetica crammed rg.ttf */,
+				A32A90B324517D8C00C978B4 /* recording_jap.gif */,
 				A305140524440092008131EC /* recording.gif */,
 				5476A4211FD98E7200F20B64 /* Assets.xcassets */,
+				A319681E2451C606001AA7E8 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -129,6 +139,7 @@
 				A326E29D23853B5C005E5ED1 /* VoiceLikeMe-Bridging-Header.h */,
 				5476A41C1FD98E7200F20B64 /* RecorderVC.swift */,
 				A370A972244893B90093229C /* PlayerVC.swift */,
+				A32A909D24517B0400C978B4 /* Global.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -235,6 +246,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ja,
 			);
 			mainGroup = 5476A40E1FD98E7100F20B64;
 			productRefGroup = 5476A4181FD98E7200F20B64 /* Products */;
@@ -253,6 +265,8 @@
 			files = (
 				5476A4251FD98E7200F20B64 /* LaunchScreen.storyboard in Resources */,
 				5476A4221FD98E7200F20B64 /* Assets.xcassets in Resources */,
+				A32A90B424517D8C00C978B4 /* recording_jap.gif in Resources */,
+				A319681C2451C606001AA7E8 /* Localizable.strings in Resources */,
 				A39C2A112449E48500DF0662 /* coolvetica crammed rg.ttf in Resources */,
 				A305140624440092008131EC /* recording.gif in Resources */,
 				5476A4201FD98E7200F20B64 /* Main.storyboard in Resources */,
@@ -275,6 +289,7 @@
 				A33C350C2449F3910049537A /* SelectionDialogItem.swift in Sources */,
 				5476A41D1FD98E7200F20B64 /* RecorderVC.swift in Sources */,
 				A370A973244893B90093229C /* PlayerVC.swift in Sources */,
+				A32A909E24517B0400C978B4 /* Global.swift in Sources */,
 				A33C350A2449F3620049537A /* SelectionDialog.swift in Sources */,
 				A31B3D70244A2F2A0001DD16 /* PlayItem.swift in Sources */,
 				A313AA7B244B7B8200FFBEA0 /* MyUIView.swift in Sources */,
@@ -289,6 +304,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				5476A41F1FD98E7200F20B64 /* Base */,
+				A31968182451C49D001AA7E8 /* ja */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -297,8 +313,17 @@
 			isa = PBXVariantGroup;
 			children = (
 				5476A4241FD98E7200F20B64 /* Base */,
+				A31968192451C49D001AA7E8 /* ja */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		A319681E2451C606001AA7E8 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A319681D2451C606001AA7E8 /* ja */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -308,6 +333,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -365,6 +391,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

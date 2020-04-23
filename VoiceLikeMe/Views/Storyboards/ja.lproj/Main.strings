@@ -1,0 +1,24 @@
+
+/* Class = "UILabel"; text = "200410_082012.wav"; ObjectID = "D5d-kQ-SKp"; */
+"D5d-kQ-SKp.text" = "200410_082012.wav";
+
+/* Class = "UILabel"; text = "Tap to start recording"; ObjectID = "ICm-Rb-g0a"; */
+"ICm-Rb-g0a.text" = "Tap to start recording";
+
+/* Class = "UINavigationItem"; title = "Voices Like Me"; ObjectID = "MGw-Ce-Byu"; */
+"MGw-Ce-Byu.title" = "Voices Like Me";
+
+/* Class = "UILabel"; text = "00:00:00"; ObjectID = "OLq-Ea-nCP"; */
+"OLq-Ea-nCP.text" = "00:00:00";
+
+/* Class = "UILabel"; text = "00:00"; ObjectID = "d2d-dm-tor"; */
+"d2d-dm-tor.text" = "00:00";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "mBm-rP-mdP"; */
+"mBm-rP-mdP.title" = "Back";
+
+/* Class = "UILabel"; text = "00:00"; ObjectID = "nij-EI-csA"; */
+"nij-EI-csA.text" = "00:00";
+
+/* Class = "UILabel"; text = "4/10/2020, 8:20 AM"; ObjectID = "scM-5k-laV"; */
+"scM-5k-laV.text" = "4/10/2020, 8:20 AM";
