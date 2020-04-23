@@ -9,13 +9,13 @@
 import UIKit
 import AVFoundation
 
-class PlayerVC: UIViewController {
+class PlayerVC: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var btnBack: UIBarButtonItem!
     @IBOutlet weak var collectionView: UICollectionView!
     
     let DOCUMENT_ROOT = NSSearchPathForDirectoriesInDomains(.documentDirectory,.userDomainMask, true)[0] as String
-
+    let MAX_REPLAY_LENGTH = 2
     
     var playList: [PlayItem] = [] {
         didSet {
@@ -153,6 +153,8 @@ class PlayerVC: UIViewController {
 
                 let alert = UIAlertController(title: NSLocalizedString("Replay File", comment: ""), message: "", preferredStyle: .alert)
                 alert.addTextField { (textField) in
+                    textField.keyboardType = .numberPad
+                    textField.delegate = self
                 }
 
                 alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: .default, handler: { [weak alert] (_) in
@@ -174,6 +176,13 @@ class PlayerVC: UIViewController {
         } else {
             print("Could not find index path")
         }
+    }
+    
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        guard let text = textField.text else { return true }
+        let newLength = text.count + string.count - range.length
+        return newLength <= self.MAX_REPLAY_LENGTH
     }
     
     func loadData() {
@@ -320,6 +329,12 @@ class PlayerVC: UIViewController {
     }
     */
     @IBAction func action_goto_recorderVC(_ sender: Any) {
+        
+        for cell in self.collectionView.visibleCells as! [PlayListCell] {
+             // do something
+            cell.stop()
+         }
+
         self.navigationController?.dismiss(animated: true, completion: nil)
     }
 }
