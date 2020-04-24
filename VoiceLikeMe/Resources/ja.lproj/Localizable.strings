@@ -14,13 +14,13 @@
 "Share File" = "ファイルをシェア";
 "Rename File" = "ファイル名変更";
 "Delete File" = "ファイルを削除";
-"Replay File" = "ファイルリプレイ";
+"Replay File" = "リピート再生";
 "Confirm Delete" = "削除を確認";
 "Are you sure you would like to delete this file?" = "このファイルを削除してもよろしいですか？";
 
-"OK" = "オーケー";
+"OK" = "OK";
 "Cancel" = "キャンセル";
 "Yes" = "はい";
 "NO" = "番号";
 "Close" = "閉じる";
-"Back" = "バック";
+"Back" = "戻る";
