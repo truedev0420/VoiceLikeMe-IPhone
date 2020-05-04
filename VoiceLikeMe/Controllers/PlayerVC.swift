@@ -13,6 +13,7 @@ class PlayerVC: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var btnBack: UIBarButtonItem!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var emptyRecordingLabel: UILabel!
     
     let DOCUMENT_ROOT = NSSearchPathForDirectoriesInDomains(.documentDirectory,.userDomainMask, true)[0] as String
     let MAX_REPLAY_LENGTH = 2
@@ -38,8 +39,21 @@ class PlayerVC: UIViewController, UITextFieldDelegate {
         self.collectionView.addGestureRecognizer(longPressGR)
         
         btnBack.title = NSLocalizedString("Back", comment: "")
+        emptyRecordingLabel.text = NSLocalizedString("No saved recordings", comment: "")
+        
+        refreshView()
     }
     
+    func refreshView(){
+        
+        if(playList.count == 0){
+            emptyRecordingLabel.isHidden = false
+            collectionView.isHidden = true
+        }else{
+            emptyRecordingLabel.isHidden = true
+            collectionView.isHidden = false
+        }
+    }
     
     @objc
     func handleLongPress(longPressGR: UILongPressGestureRecognizer) {
@@ -105,6 +119,7 @@ class PlayerVC: UIViewController, UITextFieldDelegate {
                     }
                     
                     self.loadData()
+                    self.refreshView()
                     
                 }))
                 
@@ -135,6 +150,7 @@ class PlayerVC: UIViewController, UITextFieldDelegate {
                     }
                     
                     self.loadData()
+                    self.refreshView()
                 }))
 
                 refreshAlert.addAction(UIAlertAction(title: NSLocalizedString("NO", comment: ""), style: .cancel, handler: { (action: UIAlertAction!) in
@@ -153,6 +169,7 @@ class PlayerVC: UIViewController, UITextFieldDelegate {
 
                 let alert = UIAlertController(title: NSLocalizedString("Replay File", comment: ""), message: "", preferredStyle: .alert)
                 alert.addTextField { (textField) in
+                    textField.placeholder = NSLocalizedString("Please enter number", comment: "")
                     textField.keyboardType = .numberPad
                     textField.delegate = self
                 }
@@ -162,7 +179,11 @@ class PlayerVC: UIViewController, UITextFieldDelegate {
                     let textValue = textField?.text!
                        
                     let currentCell : PlayListCell = self.collectionView.cellForItem(at: indexPath) as! PlayListCell
-                    currentCell.replay(playCount: Int(textValue ?? "1") ?? 1)
+                    let playCount = Int(textValue ?? "0") ?? 0
+                    
+                    if(playCount != 0){
+                        currentCell.replay(playCount: playCount)
+                    }
                 }))
                 
                 alert.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .cancel, handler: { (action: UIAlertAction!) in

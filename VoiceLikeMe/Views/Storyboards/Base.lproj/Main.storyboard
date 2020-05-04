@@ -238,6 +238,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="izd-Uz-SX3" userLabel="EmptyRecordingLabel">
+                                <rect key="frame" x="16" y="338" width="343" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="Vjq-CQ-3q0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wT3-Pt-q1i">
                                 <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -379,8 +388,12 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="izd-Uz-SX3" firstAttribute="centerY" secondItem="BiC-j4-c3f" secondAttribute="centerY" id="AVG-Zt-jup"/>
                             <constraint firstItem="wT3-Pt-q1i" firstAttribute="leading" secondItem="BiC-j4-c3f" secondAttribute="leading" id="DXB-yg-zbb"/>
+                            <constraint firstItem="izd-Uz-SX3" firstAttribute="centerX" secondItem="BiC-j4-c3f" secondAttribute="centerX" id="OSb-a6-buQ"/>
                             <constraint firstItem="wT3-Pt-q1i" firstAttribute="bottom" secondItem="BiC-j4-c3f" secondAttribute="bottom" id="Pyu-VN-xaT"/>
+                            <constraint firstItem="izd-Uz-SX3" firstAttribute="leading" secondItem="BiC-j4-c3f" secondAttribute="leading" constant="16" id="R4s-1k-YT6"/>
+                            <constraint firstItem="BiC-j4-c3f" firstAttribute="trailing" secondItem="izd-Uz-SX3" secondAttribute="trailing" constant="16" id="ihS-bu-zcC"/>
                             <constraint firstItem="wT3-Pt-q1i" firstAttribute="trailing" secondItem="BiC-j4-c3f" secondAttribute="trailing" id="jdv-s2-DzJ"/>
                             <constraint firstItem="wT3-Pt-q1i" firstAttribute="top" secondItem="BiC-j4-c3f" secondAttribute="top" id="qw5-Jn-tmo"/>
                         </constraints>
@@ -396,6 +409,7 @@
                     <connections>
                         <outlet property="btnBack" destination="mBm-rP-mdP" id="uxp-JD-CUG"/>
                         <outlet property="collectionView" destination="wT3-Pt-q1i" id="tpc-iO-aCp"/>
+                        <outlet property="emptyRecordingLabel" destination="izd-Uz-SX3" id="Iez-MN-4ks"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wJC-Hi-Blm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
